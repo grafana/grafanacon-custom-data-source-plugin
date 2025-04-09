@@ -17,21 +17,18 @@ However after the conference if you'd like to access fresher/larger datasets you
    ```bash
    go run main.go
    ```
-3. Access the JSON file at: http://localhost:8080/resource/egc4-d24i.json?$$app_token=good
-4. Filter by station: http://localhost:8080/resource/egc4-d24i.json?$$app_token=good&stationname=JoseRizalBridgeNorth
+3. In your browser go to http://localhost:8080
 
 ## Features
 
-- Serves a static JSON file (`data.json`) at `/resource/egc4-d24i.json` with valid token
-- Requires `$$app_token=good` query parameter
-- Optional `stationname` parameter to filter data by station
+- Serves a static JSON file (`data.json`) at `/resource/egc4-d24i.json` with valid token: example: http://localhost:8080/resource/egc4-d24i.json?$$app_token=good
+- Requires `$$app_token=good` query parameter, can test failing auth at http://localhost:8080/resource/egc4-d24i.json?$$app_token=bad
+- Optional `stationname` parameter to filter data by station: for example:  http://localhost:8080/resource/egc4-d24i.json?$$app_token=good&stationname=JoseRizalBridgeNorth
 - Returns 403 Forbidden for invalid or missing tokens
 - Returns 404 for all other routes
-- Runs on port 8080
-- Simple and lightweight implementation
 
-## Live Data
-Once you are in a place with live data, you may wish to update your project to use real data. 
+## Live Data (after workshop)
+Once you have better internet access, you may wish to update your plugin to use a real API endpoint rather than this local dupe. To do so: 
 
 1. [Sign up for an access token](https://data.seattle.gov/signup)
 2. In your plugin code replace http://localhost:8080 with https://data.seattle.gov/

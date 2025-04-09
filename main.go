@@ -74,8 +74,8 @@ func main() {
 			http.NotFound(w, r)
 			return
 		}
-		w.Header().Set("Content-Type", "text/plain")
-		w.Write([]byte("the server for your target api is up and running"))
+		w.Header().Set("Content-Type", "text/html")
+		w.Write([]byte("the server for your target api is up and running<p>all data available at <a href=\"http://localhost:8080/resource/egc4-d24i.json?$$app_token=good\">http://localhost:8080/resource/egc4-d24i.json?$$app_token=good</a></p><p>filter by station name at <a href=\"http://localhost:8080/resource/egc4-d24i.json?$$app_token=good&stationname=JoseRizalBridgeNorth\">http://localhost:8080/resource/egc4-d24i.json?$$app_token=good&stationname=JoseRizalBridgeNorth</a></p>"))
 	})
 
 	// Start the server
