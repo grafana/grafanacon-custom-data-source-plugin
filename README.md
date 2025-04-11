@@ -2,6 +2,15 @@
 
 Your one stop shop for all resources you'll need in our hands on lab on how to build a custom data source plugin!
 
+## Table of Contents
+- [Prerequisites](#prerequisites)
+- [Setup (DO THIS NOW)](#setup-do-this-now)
+- [Our Target API: Seattle Open Data -- Road Weather Station](#our-target-api-seattle-open-data----road-weather-station)
+- [Running the Target API Locally](#running-the-target-api-locally)
+  - [Target API Features](#target-api-features)
+- [Live Data (after workshop)](#live-data-after-workshop)
+
+
 ## Prerequisites
 - Docker
 - Go 1.22
@@ -43,7 +52,7 @@ A grafana data source plugin queries data from an external api and then visualiz
    ```
 3. In your browser go to http://localhost:8080
 
-## Features
+### Target API Features
 
 - Serves a static JSON file (`data.json`) at `/resource/egc4-d24i.json` with valid token: example: http://localhost:8080/resource/egc4-d24i.json?$$app_token=good
 - Requires `$$app_token=good` query parameter, can test failing auth at http://localhost:8080/resource/egc4-d24i.json?$$app_token=bad
