@@ -6,7 +6,7 @@ Your one stop shop for all resources you'll need in our hands on lab on how to b
 - [Prerequisites](#prerequisites)
 - [Setup (DO THIS NOW)](#setup-do-this-now)
 - [Our Target API: Seattle Open Data -- Road Weather Station](#our-target-api-seattle-open-data----road-weather-station)
-- [Running the Target API Locally](#running-the-target-api-locally)
+  - [Running the Target API Locally](#running-the-target-api-locally)
   - [Target API Features](#target-api-features)
 - [Live Data (after workshop)](#live-data-after-workshop)
 
@@ -43,7 +43,7 @@ Note: Hotel wifi can be spotty and `npm install` can take a while to run. If npm
 
 A grafana data source plugin queries data from an external api and then visualizes it in grafana. Our project for today will be to build a data source plugin that connects to [Seattle Open Data's Road Weather Station Data](https://data.seattle.gov/Transportation/Road-Weather-Information-Stations/egc4-d24i/about_data). As hotel internet bandwidth can sometimes be in limited supply, we've duplicated their api and data to run locally in a very small no dependency go server. For the purposes of this workshop, we encourage you to run it on your machine. However after this workshop, it should be easy to edit your configuration settings to connect to a [live endpoint](#live-data).
 
-## Running the Target API Locally 
+### Running the Target API Locally 
 
 1. Clone this repository
 2. Run the server:
