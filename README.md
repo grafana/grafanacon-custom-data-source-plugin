@@ -22,7 +22,7 @@ Scaffold your plugin:
    - Enter a name for your plugin: test
    - Enter your organization name: my-test-org
 4. `cd ./mytestorg-test-datasource`
-5. `npm instal`l
+5. `npm install`
 6. `npm run dev` (keep this running throughout the workshop)
 7. in a separate tab: `mage -v` (or specify the build for your machine to speed it up ex: `mage -v build:linuxARM64`)
 8. `docker compose up`
