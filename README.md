@@ -11,7 +11,7 @@ Your one stop shop for all resources you'll need in our hands on lab on how to b
 
 Not sure if you have one of these installed? Ask for help!  
 
-## Getting setup (DO THIS NOW)
+## Setup (DO THIS NOW)
 
 Scaffold your plugin:
 1. Find a place on your file system where you'd like to create a new folder for your plugin
@@ -30,9 +30,9 @@ Scaffold your plugin:
 
 Note: Hotel wifi can be spotty and `npm install` can take a while to run. If npm install is taking forever consider using your phone as a hotspot temporarily! Or wait a few minutes and try again! Or if your neighbor's is working, consider pairing together. 
 
-## Our Target API
+## Our Target API: Seattle Open Data -- Road Weather Station
 
-A grafana data source plugin brings data from different apis and into grafana. Our project for today will be to build a data source plugin that connects to [Seattle Open Data's Road Weather Station Data](https://data.seattle.gov/Transportation/Road-Weather-Information-Stations/egc4-d24i/about_data). As hotel internet bandwidth can sometimes be in limited supply, we've duplicated their api and data to run locally in a very small no dependency go server. For the purposes of this workshop, we encourage you to run it on your machine. However after the conference, it should be easy to edit your configuration settings to connect to a [live endpoint](#live-data).
+A grafana data source plugin queries data from an external api and then visualizes it in grafana. Our project for today will be to build a data source plugin that connects to [Seattle Open Data's Road Weather Station Data](https://data.seattle.gov/Transportation/Road-Weather-Information-Stations/egc4-d24i/about_data). As hotel internet bandwidth can sometimes be in limited supply, we've duplicated their api and data to run locally in a very small no dependency go server. For the purposes of this workshop, we encourage you to run it on your machine. However after this workshop, it should be easy to edit your configuration settings to connect to a [live endpoint](#live-data).
 
 ## Running the Target API Locally 
 
