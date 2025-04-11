@@ -3,11 +3,11 @@
 Your one stop shop for all resources you'll need in our hands on lab on how to build a custom data source plugin!
 
 ## Prerequisites
-Docker
-Go 1.22
-Mage
-LTS version of Node.js
-Git
+- Docker
+- Go 1.22
+- Mage
+- LTS version of Node.js
+- Git
 
 Not sure if you have one of these installed? Ask for help!  
 
