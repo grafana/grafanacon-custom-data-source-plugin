@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Server for Grafanacon</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            max-width: 800px;
+        }
+        h1 {
+            color: #3B7A57;
+        }
+        a {
+            color: #0066cc;
+        }
+        .endpoint {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .commit-section {
+            margin-top: 30px;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+        .commit-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #eee;
+            position: relative;
+            padding-left: 35px;
+        }
+        .commit-number {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #3B7A57;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 25px;
+            font-weight: bold;
+        }
+        .commit-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .commit-description {
+            margin-left: 20px;
+            color: #555;
+        }
+        /* Linkable header styles */
+        h1[id], h2[id], h3[id] {
+            position: relative;
+        }
+        h1[id]:hover:after, h2[id]:hover:after, h3[id]:hover:after {
+            content: " 🔗";
+            font-size: 0.8em;
+            color: #999;
+        }
+        h1[id], h2[id], h3[id] {
+            scroll-margin-top: 20px;
+        }
+        /* Table of contents */
+        .toc {
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        .toc ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-title"><a href="#main-title">Road Weather Station API Server</a></h1>
+    <p>This server mimics the data and api from Open Data Seattle's <a href="https://dev.socrata.com/foundry/data.seattle.gov/egc4-d24i">Road Weather Station API</a>. This page contains documenation on how to access this mocked server as well as other helpful resources from the workshop.</p>
+    
+    <div class="toc">
+        <h3>On This Page:</h3>
+        <ul>
+            <li><a href="#endpoints">Available Endpoints</a></li>
+            <li><a href="#authentication">Authentication</a></li>
+            <li><a href="#workshop-commits">Workshop Commits</a></li>
+        </ul>
+    </div>
+    
+    <h2 id="endpoints"><a href="#endpoints">Available Endpoints:</a></h2>
+    <div class="endpoint">
+        <p><strong>All data:</strong></p>
+        <a href="http://localhost:8080/resource/egc4-d24i.json?$$app_token=good">
+            http://localhost:8080/resource/egc4-d24i.json?$$app_token=good
+        </a>
+    </div>
+    
+    <div class="endpoint">
+        <p><strong>Filter by station name:</strong></p>
+        <a href="http://localhost:8080/resource/egc4-d24i.json?$$app_token=good&stationname=JoseRizalBridgeNorth">
+            http://localhost:8080/resource/egc4-d24i.json?$$app_token=good&stationname=JoseRizalBridgeNorth
+        </a>
+    </div>
+    
+    <div class="endpoint">
+        <p><strong>Docker internal access:</strong></p>
+        <a href="http://host.docker.internal:8080/resource/egc4-d24i.json?$$app_token=good">
+            http://host.docker.internal:8080/resource/egc4-d24i.json?$$app_token=good
+        </a>
+    </div>
+    
+    <h2 id="authentication"><a href="#authentication">Authentication:</a></h2>
+    <p>All requests require the app token parameter: <code>$$app_token=good</code></p>
+    <p>You can test failing authentication with: <code>$$app_token=bad</code></p>
+    
+    <div class="commit-section">
+        <h2 id="workshop-commits"><a href="#workshop-commits">Workshop Commits</a></h2>
+        <p>Reference these commits to follow the workshop progress or catch up:</p>
+        
+        <div class="commit-item">
+            <div class="commit-number">1</div>
+            <div class="commit-title">
+                <a href="https://github.com/grafana/grafanacon-custom-data-source-plugin-example/commit/c41fd8a73a4e19137f83a8d191fa06b2c5db19e5" target="_blank">
+                    Initial Commit
+                </a>
+            </div>
+            <div class="commit-description">
+                Start of the workshop with all scaffolding code generated
+            </div>
+        </div>
+        
+        <div class="commit-item">
+            <div class="commit-number">2</div>
+            <div class="commit-title">
+                <a href="https://github.com/grafana/grafanacon-custom-data-source-plugin-example/commit/b0e3afe58559b1b918ea693f40a63df8cff58dfc" target="_blank">
+                    Implemented Check Health
+                </a>
+            </div>
+            <div class="commit-description">
+                Implemented backend for check health
+            </div>
+        </div>
+        
+        <div class="commit-item">
+            <div class="commit-number">3</div>
+            <div class="commit-title">
+                <a href="https://github.com/grafana/grafanacon-custom-data-source-plugin-example/commit/93d8e1ce7f5421a3622f246e83dbff987fe7b4bc" target="_blank">
+                    Config Page Changes
+                </a>
+            </div>
+            <div class="commit-description">
+                Updated the frontend config editor to have new configuration settings
+            </div>
+        </div>
+        
+        <div class="commit-item">
+            <div class="commit-number">4</div>
+            <div class="commit-title">
+                <a href="https://github.com/grafana/grafanacon-custom-data-source-plugin-example/commit/f5fa74e698100e6ad8a765af770a2db4a3bdf023" target="_blank">
+                    Config Page Backend
+                </a>
+            </div>
+            <div class="commit-description">
+                Implemented backend for config page
+            </div>
+        </div>
+        
+        <div class="commit-item">
+            <div class="commit-number">5</div>
+            <div class="commit-title">
+                <a href="https://github.com/grafana/grafanacon-custom-data-source-plugin-example/commit/257514fa71e895988dae5f077724f5de0541e028" target="_blank">
+                    Query Data implemented
+                </a>
+            </div>
+            <div class="commit-description">
+                Updated QueryData function to ping external api
+            </div>
+        </div>
+        
+        <div class="commit-item">
+            <div class="commit-number">6</div>
+            <div class="commit-title">
+                <a href="https://github.com/grafana/grafanacon-custom-data-source-plugin-example/commit/86147c2193645d1e1aa70f325aeb7437fb305f75" target="_blank">
+                    Query Editor updated
+                </a>
+            </div>
+            <div class="commit-description">
+                Updated the frontend for the Query Editor to only use query text and not constant
+            </div>
+        </div>
+        
+        <div class="commit-item">
+            <div class="commit-number">7</div>
+            <div class="commit-title">
+                <a href="https://github.com/grafana/grafanacon-custom-data-source-plugin-example/commit/43751352761ebcf90e86e43bc8d5208b8195fdb5" target="_blank">
+                    Finished tutorial
+                </a>
+            </div>
+            <div class="commit-description">
+                Updated backend to use querytext in building url, some style fixes
+            </div>
+        </div>
+        
+        <!-- Add more commits here as they become available
+        <div class="commit-item">
+            <div class="commit-number">8</div>
+            <div class="commit-title">
+                <a href="#" target="_blank">
+                    Next commit...
+                </a>
+            </div>
+            <div class="commit-description">
+                Description of next commit (placeholder)
+            </div>
+        </div> 
+        -->
+        
+    </div>
+</body>
+</html> 

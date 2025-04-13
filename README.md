@@ -24,17 +24,15 @@ Not sure if you have one of these installed? Ask for help!
 
 Scaffold your plugin:
 1. Find a place on your file system where you'd like to create a new folder for your plugin
-2. Run create plugin (creates it's own folder): `npx @grafana/create-plugin@latest`
-3. Follow the wizard with the following answers:
+2. `npx @grafana/create-plugin@latest` (creates it's own folder, downloads template, and starts wizard):
    - Select a plugin type: data source
    - Add a backend to support server-side functionality?: y
    - Enter a name for your plugin: test
    - Enter your organization name: my-test-org
-4. `cd ./mytestorg-test-datasource`
-5. `npm install`
-6. `npm run dev` (keep this running throughout the workshop)
-7. in a separate tab: `mage -v` (or specify the build for your machine to speed it up ex: `mage -v build:linuxARM64`)
-8. `docker compose up`
+3. `cd ./mytestorg-test-datasource`
+4. `npm install`
+5. `npm run dev` (keep this running in a separate tab throughout the workshop, it will watch frontend files and compile them)
+7. `mage -v && docker compose up` (or specify the build for your machine to speed it up ex: `mage -v build:linuxARM64`)
 9. open http://localhost:3000
 
 Note: Hotel wifi can be spotty and `npm install` can take a while to run. If npm install is taking forever consider using your phone as a hotspot temporarily! Or wait a few minutes and try again! Or if your neighbor's is working, consider pairing together. 
@@ -46,11 +44,15 @@ A grafana data source plugin queries data from an external api and then visualiz
 ### Running the Target API Locally 
 
 1. Clone this repository
-2. Run the server:
+   ```
+   git clone https://github.com/grafana/grafanacon-custom-data-source-plugin.git
+   ```
+2. cd grafanacon-custom-data-source-plugin
+3. Run the server:
    ```bash
    go run main.go
    ```
-3. In your browser go to http://localhost:8080
+4. In your browser go to http://localhost:8080
 
 ### Target API Features
 
