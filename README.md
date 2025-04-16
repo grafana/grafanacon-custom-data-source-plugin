@@ -22,7 +22,7 @@ Not sure if you have one of these installed? Ask for help!
 
 ## Setup (DO THIS NOW)
 
-Scaffold your plugin:
+To Scaffold your plugin:
 1. Find a place on your file system where you'd like to create a new folder for your plugin
 2. `npx @grafana/create-plugin@latest` (creates it's own folder, downloads template, and starts wizard):
    - Select a plugin type: data source
