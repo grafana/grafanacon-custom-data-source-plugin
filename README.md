@@ -69,9 +69,11 @@ Once you have better internet access, you may wish to update your plugin to use 
 2. In your datasource configuration replace http://localhost:8080 with https://data.seattle.gov/ and add your token.
 
 So that requests go from:
+
 `http://localhost:8080/resource/egc4-d24i.json?$$app_token=good&stationname=SpokaneSwingBridge`
 
 to this:
+
 `https://data.seattle.gov/resource/egc4-d24i.json?$$app_token={a real app token you get from data.seattle.gov}&stationname=SpokaneSwingBridge`
 
 Explore the api docs here: https://dev.socrata.com/foundry/data.seattle.gov/egc4-d24i
