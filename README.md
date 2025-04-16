@@ -1,6 +1,6 @@
 # Grafanacon Custom Data Source Plugin 
 
-Your one stop shop for all resources you'll need in our hands on lab on how to build a custom data source plugin!
+Your one stop shop for all resources you'll need in our hands on lab on how to build a custom data source plugin! This repo contains a local version of the api we plan to hit today. It will run on `localhost:8080`. It will also serve all of documentation we'll need as well as references to git commits to [the fully built version of the plugin](https://github.com/grafana/grafanacon-custom-data-source-plugin-example).  
 
 ## Table of Contents
 - [Prerequisites](#prerequisites)
