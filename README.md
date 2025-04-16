@@ -69,14 +69,16 @@ Once you have better internet access, you may wish to update your plugin to use 
 2. In your datasource configuration replace http://localhost:8080 with https://data.seattle.gov/ and add your token.
 
 So that requests go from:
-http://localhost:8080/resource/egc4-d24i.json?$$app_token=good&stationname=SpokaneSwingBridge
+`http://localhost:8080/resource/egc4-d24i.json?$$app_token=good&stationname=SpokaneSwingBridge`
 
 to this:
-https://data.seattle.gov/resource/egc4-d24i.json?$$app_token={a real app token you get from data.seattle.gov}&stationname=SpokaneSwingBridge
+`https://data.seattle.gov/resource/egc4-d24i.json?$$app_token={a real app token you get from data.seattle.gov}&stationname=SpokaneSwingBridge`
 
 Explore the api docs here: https://dev.socrata.com/foundry/data.seattle.gov/egc4-d24i
 
-There's lots of ways to extend your plugin! Some things to try after this workshop:
+There are lots of ways to extend your plugin after this talk! Some things to try after this workshop:
 - adding support for geolocation coordinates
 - supporting [SoQL queries](https://dev.socrata.com/docs/queries/)
 - connecting to other datasets (resources beyond egc4-d24i)
+- building out query vs builder mode
+- practice writing e2e tests withour testing framework
