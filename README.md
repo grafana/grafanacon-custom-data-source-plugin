@@ -66,7 +66,7 @@ A grafana data source plugin queries data from an external api and then visualiz
 Once you have better internet access, you may wish to update your plugin to use a real API endpoint rather than this local dupe. To do so: 
 
 1. [Sign up for an access token](https://data.seattle.gov/signup)
-2. In your datasource configuration replace http://localhost:8080 with https://data.seattle.gov/ and add your token.
+2. In your datasource configuration change your domain to with https://data.seattle.gov/ and swap out "good" for your app token.
 
 So that requests go from:
 
