@@ -48,6 +48,19 @@
             line-height: 25px;
             font-weight: bold;
         }
+        .list-item-number {
+            display: inline-block;
+            background-color: #5a9b78;
+            color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+            font-weight: bold;
+            font-size: 0.8em;
+            margin-right: 5px;
+        }
         .commit-title {
             font-weight: bold;
             margin-bottom: 5px;
@@ -77,6 +90,10 @@
         }
         .toc ul {
             padding-left: 20px;
+        }
+        .commit-item ul {
+            list-style-type: none;
+            padding-left: 0;
         }
     </style>
 </head>
@@ -142,8 +159,28 @@
                     Implemented Check Health
                 </a>
             </div>
-            <div class="commit-description">
-                Implemented backend for check health
+            <div>
+                <ul>
+                    <li>
+                        <span class="list-item-number">A</span>
+                        <a href="https://tinyurl.com/gcon-alerting" target="_blank">
+                            Added Alerting
+                        </a>
+                    </li>
+                    <li>
+                        <span class="list-item-number">B</span>
+                        <a href="https://tinyurl.com/gcon-docker" target="_blank">
+                            Enable Local Host Access for Docker
+                        </a>
+                    </li>
+                    <li>
+                        <span class="list-item-number">C</span>
+                        <a href="https://tinyurl.com/gcon-checkhealth" target="_blank">
+                            Implement Check Health
+                        </a>
+                    </li>
+                    
+                </ul>
             </div>
         </div>
         
@@ -154,8 +191,41 @@
                     Config Page Changes
                 </a>
             </div>
-            <div class="commit-description">
-                Updated the frontend config editor to have new configuration settings
+            <div>
+                <ul>
+                    <li>
+                        <span class="list-item-number">A</span>
+                        <a href="https://tinyurl.com/gcon-config-types" target="_blank">
+                            Changed config types
+                        </a>
+                    </li>
+                    <li>
+                        <span class="list-item-number">B</span>
+                        <a href="https://tinyurl.com/gcon-config-change-handlers-1" target="_blank">
+                            Edit Config change handlers from path to domain and resource
+                        </a>
+                    </li>
+                    <li>
+                        <span class="list-item-number">C</span>
+                        <a href="https://tinyurl.com/gcon-config-change-handlers-2" target="_blank">
+                            Edit change handlers from api key to app token
+                        </a>
+                    </li>
+                    <li>
+                        <span class="list-item-number">D</span>
+                        <a href="https://tinyurl.com/gcon-config-react-1" target="_blank">
+                            Edit returned components from path input to domain and resource inputs
+                        </a>
+                    </li>
+                    <li>
+                        <span class="list-item-number">E</span>
+                        <a href="https://tinyurl.com/gcon-config-react-2" target="_blank">
+                            Edit returned components from api key to app token
+                        </a>
+                    </li>
+
+                    
+                </ul>
             </div>
         </div>
         
@@ -166,8 +236,21 @@
                     Config Page Backend
                 </a>
             </div>
-            <div class="commit-description">
-                Implemented backend for config page
+            <div>
+                <ul>
+                    <li>
+                        <span class="list-item-number">A</span>
+                        <a href="https://tinyurl.com/gcon-model" target="_blank">
+                            Update model settings to use app token, domain, and resource
+                        </a>
+                    </li>
+                    <li>
+                        <span class="list-item-number">B</span>
+                        <a href="https://tinyurl.com/gcon-new-url" target="_blank">
+                            Update url to use app token, domain, and resource
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
         
@@ -178,8 +261,45 @@
                     Query Data implemented
                 </a>
             </div>
-            <div class="commit-description">
-                Updated QueryData function to ping external api
+            <div>
+                <ul>
+                    <li>
+                        <span class="list-item-number">A</span>
+                        <a href="https://github.com/grafana/grafanacon-custom-data-source-plugin-example/commit/aed70be7a28387013bdeda81d54a934b69f18f80#diff-213832a772024707da1a5234b077c6f336e32d7316a0bfb5d228517e9886febeR83-R92" target="_blank">
+                            Query Data function to create a url from app token, domain, and resource
+                        </a>
+                    </li>
+                    <li>
+                        <span class="list-item-number">B</span>
+                        <a href="https://github.com/grafana/grafanacon-custom-data-source-plugin-example/commit/aed70be7a28387013bdeda81d54a934b69f18f80#diff-213832a772024707da1a5234b077c6f336e32d7316a0bfb5d228517e9886febeR90-R101" target="_blank">
+                            Use that url to fetch data from the external api
+                        </a>
+                    </li>
+                    <li>
+                        <span class="list-item-number">C</span>
+                        <a href="https://github.com/grafana/grafanacon-custom-data-source-plugin-example/commit/aed70be7a28387013bdeda81d54a934b69f18f80#diff-213832a772024707da1a5234b077c6f336e32d7316a0bfb5d228517e9886febeL64-L65" target="_blank">
+                            Define structure of data to be returned
+                        </a>
+                    </li>
+                    <li>
+                        <span class="list-item-number">D</span>
+                        <a href="https://github.com/grafana/grafanacon-custom-data-source-plugin-example/commit/aed70be7a28387013bdeda81d54a934b69f18f80#diff-213832a772024707da1a5234b077c6f336e32d7316a0bfb5d228517e9886febeR104-R108" target="_blank">
+                            Use that struct to parse the data
+                        </a>
+                    </li>
+                    <li>
+                        <span class="list-item-number">E</span>
+                        <a href="https://github.com/grafana/grafanacon-custom-data-source-plugin-example/commit/aed70be7a28387013bdeda81d54a934b69f18f80#diff-213832a772024707da1a5234b077c6f336e32d7316a0bfb5d228517e9886febeR110-R129" target="_blank">
+                            Reformat parsed data into a columnar format
+                        </a>
+                    </li>
+                    <li>
+                        <span class="list-item-number">F</span>
+                        <a href="https://github.com/grafana/grafanacon-custom-data-source-plugin-example/commit/aed70be7a28387013bdeda81d54a934b69f18f80#diff-213832a772024707da1a5234b077c6f336e32d7316a0bfb5d228517e9886febeL82-L85" target="_blank">
+                            Update the returned data frame to have our columnar formatted data
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
         
@@ -190,8 +310,27 @@
                     Query Editor updated
                 </a>
             </div>
-            <div class="commit-description">
-                Updated the frontend for the Query Editor to only use query text and not constant
+            <div>
+                <ul>
+                    <li>
+                        <span class="list-item-number">A</span>
+                        <a href="https://github.com/grafana/grafanacon-custom-data-source-plugin-example/commit/266486089f47a61b0c4d6cfbbee9a40b228338a9#diff-c54113cf61ec99691748a3890bfbeb00e10efb3f0a76f03a0fd9ec49072e410aL4-L12" target="_blank">
+                            Update the query object types to remove constant
+                        </a>
+                    </li>
+                    <li>
+                        <span class="list-item-number">B</span>
+                        <a href="https://github.com/grafana/grafanacon-custom-data-source-plugin-example/commit/266486089f47a61b0c4d6cfbbee9a40b228338a9#diff-1e81a0c80f025829f8963ff74016a6d3c09b10e4331eabc9318a70179e4322bfL13-L21" target="_blank">
+                            Remove on change handler for the constant property
+                        </a>
+                    </li>
+                    <li>
+                        <span class="list-item-number">C</span>
+                        <a href="https://github.com/grafana/grafanacon-custom-data-source-plugin-example/commit/266486089f47a61b0c4d6cfbbee9a40b228338a9#diff-1e81a0c80f025829f8963ff74016a6d3c09b10e4331eabc9318a70179e4322bfL23-L34" target="_blank">
+                            Remove input field for constant property
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
         
@@ -202,8 +341,27 @@
                     Finished tutorial
                 </a>
             </div>
-            <div class="commit-description">
-                Updated backend to use querytext in building url, some style fixes
+            <div>
+                <ul>
+                    <li>
+                        <span class="list-item-number">A</span>
+                        <a href="https://github.com/grafana/grafanacon-custom-data-source-plugin-example/commit/ee9a6614592d4bc87add4c0dc91aa14eb5669029#diff-213832a772024707da1a5234b077c6f336e32d7316a0bfb5d228517e9886febeL63-L83" target="_blank">
+                            Define shape of query object on backend
+                        </a>
+                    </li>
+                    <li>
+                        <span class="list-item-number">B</span>
+                        <a href="https://github.com/grafana/grafanacon-custom-data-source-plugin-example/commit/ee9a6614592d4bc87add4c0dc91aa14eb5669029#diff-213832a772024707da1a5234b077c6f336e32d7316a0bfb5d228517e9886febeL91-L92" target="_blank">
+                            Use querytext in building url
+                        </a>
+                    </li>
+                    <li>
+                        <span class="list-item-number">C</span>
+                        <a href="https://github.com/grafana/grafanacon-custom-data-source-plugin-example/commit/ee9a6614592d4bc87add4c0dc91aa14eb5669029#diff-1e81a0c80f025829f8963ff74016a6d3c09b10e4331eabc9318a70179e4322bfL16-L25" target="_blank">
+                           Small style fixes
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
         
