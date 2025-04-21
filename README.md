@@ -1,6 +1,6 @@
 # Grafanacon Custom Data Source Plugin 
 
-Your one stop shop for all resources you'll need in our hands on lab on how to build a custom data source plugin! This repo contains a local version of the api we plan to hit today. It will run on `localhost:8080`. It will also serve all of documentation we'll need as well as references to git commits to [the fully built version of the plugin](https://github.com/grafana/grafanacon-custom-data-source-plugin-example).  
+This repo builds the documentation and api necessary for our [Hands On Lab at Grafanacon 2025](https://grafana.com/events/grafanacon/2025/hands-on-labs/). The server it builds runs on `localhost:8080`. It runs a simpler version of our target api that will run locally on our machine and it also will contain links to [all of the example code we plan to write together](https://github.com/grafana/grafanacon-custom-data-source-plugin-example).  
 
 ## Table of Contents
 - [Prerequisites](#prerequisites)
@@ -12,17 +12,16 @@ Your one stop shop for all resources you'll need in our hands on lab on how to b
 
 
 ## Prerequisites
+Before we get started please make sure you have installed on your machine:
 - Docker
 - Go 1.22
 - Mage
 - LTS version of Node.js
-- Git
-
-Not sure if you have one of these installed? Ask for help!  
+- Git 
 
 ## Setup (DO THIS NOW)
 
-To Scaffold your plugin:
+Run the scaffolding command to generate a new plugin's boilerplate from a template:
 1. Find a place on your file system where you'd like to create a new folder for your plugin
 2. `npx @grafana/create-plugin@latest` (creates it's own folder, downloads template, and starts wizard):
    - Select a plugin type: data source
@@ -35,7 +34,7 @@ To Scaffold your plugin:
 7. `mage -v && docker compose up` (or specify the build for your machine to speed it up ex: `mage -v build:linuxARM64`)
 9. open http://localhost:3000
 
-Note: Hotel wifi can be spotty and `npm install` can take a while to run. If npm install is taking forever consider using your phone as a hotspot temporarily! Or wait a few minutes and try again! Or if your neighbor's is working, consider pairing together. 
+Note: Conference wifi can be spotty and `npm install` can take a while to run. If npm install is taking forever consider using your phone as a hotspot temporarily! Or wait a few minutes and try again! Or if your neighbor's is working, consider pairing together. 
 
 ## Our Target API: Seattle Open Data -- Road Weather Station
 
