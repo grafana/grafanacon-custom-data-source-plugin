@@ -39,7 +39,7 @@ Note: Hotel wifi can be spotty and `npm install` can take a while to run. If npm
 
 ## Our Target API: Seattle Open Data -- Road Weather Station
 
-A grafana data source plugin queries data from an external api and then visualizes it in grafana. Our project for today will be to build a data source plugin that connects to [Seattle Open Data's Road Weather Station Data](https://data.seattle.gov/Transportation/Road-Weather-Information-Stations/egc4-d24i/about_data). As internet bandwidth can sometimes be in limited supply at conferences, we've duplicated their api and data to run locally in a very small no dependency go server. For the purposes of this workshop, we encourage you to run it on your machine. However after this workshop, it should be easy to edit your configuration settings to connect to a [live endpoint](#live-data).
+A grafana data source plugin queries data from an external api and then visualizes it in grafana. Our project for today will be to build a data source plugin that connects to [Seattle Open Data's Road Weather Station Data](https://data.seattle.gov/Transportation/Road-Weather-Information-Stations/egc4-d24i/about_data). As internet bandwidth can sometimes be in limited supply at conferences, we've duplicated their api and data to run locally in a very small no dependency go server. For the purposes of this workshop, we encourage you to run it on your machine. However after this workshop, it should be easy to edit your configuration settings to connect to a [live endpoint](#live-data-after-workshop).
 
 ### Running the Target API Locally 
 
