@@ -13,10 +13,10 @@ This repo builds the documentation and api necessary for our [Hands On Lab at Gr
 
 ## Prerequisites
 Before we get started please make sure you have installed on your machine:
-- Docker
+- [Docker](https://docs.docker.com/get-started/get-docker/)
 - Go 1.22
-- Mage
-- LTS version of Node.js
+- [Mage](https://magefile.org/)
+- [LTS](https://nodejs.org/en/about/previous-releases) version of Node.js
 - Git 
 
 ## Setup (DO THIS NOW)
