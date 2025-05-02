@@ -9,6 +9,7 @@ This repo builds the documentation and api necessary for our [Hands On Lab at Gr
   - [Running the Target API Locally](#running-the-target-api-locally)
   - [Target API Features](#target-api-features)
 - [Live Data (after workshop)](#live-data-after-workshop)
+- [Additional Resources](#additional-resources)
 
 
 ## Prerequisites
@@ -83,3 +84,24 @@ There are lots of ways to extend your plugin after this talk! Some things to try
 - connecting to other datasets (resources beyond egc4-d24i)
 - building out query vs builder mode
 - practice writing e2e tests withour testing framework
+
+## Additional Resources
+- [Grafana Plugin Tools](https://grafana.com/developers/plugin-tools/) Tutorials, How-to guides, and much more!
+- [Data Frames](https://grafana.com/developers/plugin-tools/key-concepts/data-frames) Specific docs page on data frames from Grafana Plugin Tools.
+- [grafana-plugin-sdk-go](https://github.com/grafana/grafana-plugin-sdk-go) The backend sdk for our data source plugins. [Also see generated go docs](https://pkg.go.dev/github.com/grafana/grafana-plugin-sdk-go).  
+- [Athena Variables Editor](https://github.com/grafana/athena-datasource/blob/7c8417bdbf31f91afb99d249047b0158b20b99a3/src/datasource.ts#L27) an example of how to build a custom variable query editor for a data source.
+- [Grafana developer portal](https://grafana.com/developers)
+- [Community Forum](https://community.grafana.com/c/plugin-development/30)
+- [Plugin Validator](https://github.com/grafana/plugin-validator/)
+- [Plugin Examples](https://github.com/grafana/grafana-plugin-examples/)
+- [Grafana Community Slack](https://slack.grafana.com/) don't forget to checkout the #plugin-development group
+- [Macro Example](https://github.com/grafana/grafana-plugin-examples/blob/main/examples/datasource-basic/pkg/query/macro.go)
+- [Macro docs for infinity plugin](https://grafana.com/docs/plugins/yesoreyeram-infinity-datasource/latest/query/macros/)
+- [plugin tools on provisioning](https://grafana.com/developers/plugin-tools/publish-a-plugin/provide-test-environment)
+- [grafana docs on provisioning](https://grafana.com/docs/grafana/latest/administration/provisioning/)
+- [plugin tools docs on annotations](https://grafana.com/developers/plugin-tools/how-to-guides/data-source-plugins/add-support-for-annotation-queries)
+- [grafana docs on annotations](https://grafana.com/docs/grafana/latest/dashboards/build-dashboards/annotate-visualizations/)
+- [sqlds](https://github.com/grafana/sqlds)
+- [plugin ui](https://github.com/grafana/plugin-ui)
+- [@grafana/ui](https://developers.grafana.com/ui)
+
