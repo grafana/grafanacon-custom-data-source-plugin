@@ -47,12 +47,15 @@ A grafana data source plugin queries data from an external api and then visualiz
    ```
    git clone https://github.com/grafana/grafanacon-custom-data-source-plugin.git
    ```
-2. `cd grafanacon-custom-data-source-plugin`
-3. Run the server:
+2. Change director into the repo you just created
+   ```
+   cd grafanacon-custom-data-source-plugin
+   ```
+4. Run the server:
    ```bash
    go run main.go
    ```
-4. In your browser go to `http://localhost:8080`
+5. Navigate to the running server you just started in your web browser: [http://localhost:8080](http://localhost:8080)
 
 ### Target API Features
 
