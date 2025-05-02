@@ -22,7 +22,7 @@ Before we get started please make sure you have installed on your machine:
 
 ## Setup (DO THIS NOW)
 
-Run the scaffolding command to generate a new plugin's boilerplate from a template:
+Run the **scaffolding** command to generate a new plugin's boilerplate from a template:
 1. Find a place on your file system where you'd like to create a new folder for your plugin
 2. `npx @grafana/create-plugin@latest` (creates it's own folder, downloads template, and starts wizard):
    - Select a plugin type: data source
