@@ -7,7 +7,7 @@ This repo builds the documentation and api necessary for our [Hands On Lab at Gr
 - [Setup (DO THIS NOW)](#setup-do-this-now)
 - [Our Target API: Seattle Open Data -- Road Weather Station](#our-target-api-seattle-open-data----road-weather-station)
   - [Running the Target API Locally](#running-the-target-api-locally)
-  - [Target API Features](#target-api-features)
+  - [Available Endpoints](#available-endpoints)
 - [Live Data (after workshop)](#live-data-after-workshop)
 - [Additional Resources](#additional-resources)
 
@@ -57,13 +57,14 @@ A grafana data source plugin queries data from an external api and then visualiz
    ```
 5. Navigate to the running server you just started in your web browser: [http://localhost:8080](http://localhost:8080)
 
-### Target API Features
+### Available endpoints
 
-- Serves a static JSON file (`data.json`) at `/resource/egc4-d24i.json` with valid token: example: http://localhost:8080/resource/egc4-d24i.json?$$app_token=good
-- Requires `$$app_token=good` query parameter, can test failing auth at http://localhost:8080/resource/egc4-d24i.json?$$app_token=bad
-- Optional `stationname` parameter to filter data by station: for example:  http://localhost:8080/resource/egc4-d24i.json?$$app_token=good&stationname=JoseRizalBridgeNorth
-- Returns 403 Forbidden for invalid or missing tokens
-- Returns 404 for all other routes
+- Docs: http://localhost:8080/
+- All data: http://localhost:8080/resource/egc4-d24i.json?$$app_token=good
+- Filter data by station name: http://localhost:8080/resource/egc4-d24i.json?$$app_token=good&stationname=JoseRizalBridgeNorth
+- Internal access by docker: http://host.docker.internal:8080/resource/egc4-d24i.json?$$app_token=good
+- Workshop commits: http://localhost:8080/#workshop-commits
+
 
 ## Live Data (after workshop)
 Once you have better internet access, you may wish to update your plugin to use a real API endpoint rather than this local dupe. To do so: 
